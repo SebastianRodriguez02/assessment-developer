@@ -1,0 +1,235 @@
+.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+/* Ensure vertical scrollability */
+.scrollable {
+    max-height: 675px;
+    overflow-y: auto;
+}
+
+/* Adjust layout for better separation */
+.main-container {
+    display: flex;
+    gap: 20px;
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra */
+    border-radius: 1rem; /* Bordes redondeados (equivalente a rounded-2xl) */
+    padding: 1.5rem; /* Espaciado interno (equivalente a p-6) */
+    width: 1280px; /* Ancho máximo (equivalente a max-w-7xl) */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+
+.banner2 {
+    height: 257px;
+    width: 1200px;
+}
+
+.container {
+    position: relative;
+    width: 940px;
+    height: 565px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .season {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .season.active {
+    display: block;
+  }
+
+  .map-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .map {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #e0e0e0;
+    color: #1D1D1B;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .buttons button.active {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .info-container {
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Usar flexbox para alinear el contenido */
+    gap: 20px; /* Espacio entre texto e imagen */
+    align-items: center; /* Centrar verticalmente */
+  }
+
+  .info-text {
+    flex: 1; /* Hacer que el texto ocupe más espacio */
+    text-align: left;
+  }
+
+  .info-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .info-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  .info-image {
+    flex-shrink: 0; /* Evitar que la imagen se redimensione */
+    width: 200px; /* Ajustar tamaño de la imagen */
+    border-radius: 10px;
+  }
+
+  /* Media queries para ajustes responsivos */
+
+/* Pantallas menores a 768px (tablets y teléfonos grandes) */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Cambiar a diseño de columna */
+    padding: 1rem; /* Reducir el padding */
+    gap: 10px; /* Reducir espacio entre elementos */
+  }
+
+  .content {
+    padding: 1rem; /* Reducir padding interno */
+  }
+
+  .banner2 {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Mantiene las proporciones */
+  }
+
+  .container {
+    width: 100%; /* Ajustar el ancho del contenedor */
+    height: auto; /* Permitir que el alto se ajuste dinámicamente */
+  }
+
+  .map-container {
+    width: 100%; /* Ajustar el contenedor del mapa al ancho completo */
+  }
+
+  .info-container {
+    flex-direction: column; /* Cambiar a diseño vertical */
+    text-align: center; /* Centrar contenido */
+    padding: 1rem; /* Reducir padding interno */
+  }
+
+  .info-image {
+    width: 100%; /* Ajustar la imagen al ancho completo */
+    height: auto; /* Mantener proporciones */
+  }
+
+  .buttons {
+    flex-wrap: wrap; /* Permitir que los botones se ajusten en varias filas */
+    gap: 5px; /* Reducir espacio entre botones */
+  }
+
+  .buttons button {
+    padding: 8px 10px; /* Reducir el tamaño del botón */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+  }
+}
+
+/* Pantallas menores a 480px (teléfonos pequeños) */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0.5rem; /* Reducir aún más el padding */
+    gap: 5px; /* Reducir espacio entre elementos */
+  }
+
+  .banner2 {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Mantiene proporciones */
+  }
+
+  .info-container {
+    padding: 0.5rem; /* Reducir padding interno */
+  }
+
+  .info-title {
+    font-size: 18px; /* Reducir el tamaño del título */
+  }
+
+  .info-description {
+    font-size: 14px; /* Reducir tamaño del texto descriptivo */
+  }
+
+  .buttons button {
+    font-size: 12px; /* Reducir tamaño de fuente de los botones */
+    padding: 6px 8px; /* Ajustar tamaño del botón */
+  }
+
+  .map-container {
+    width: 100%; /* Ancho completo */
+    margin: 0; /* Eliminar márgenes */
+  }
+
+  .map {
+    border-radius: 5px; /* Reducir el redondeo en móviles */
+  }
+}
+
+  
